@@ -39,4 +39,3 @@ while True:
             break
         except ValueError:
             print("This is not a number. Please enter a valid number")
-

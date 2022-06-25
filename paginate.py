@@ -36,9 +36,3 @@ list = Paginate(["hello", "world", "programming",
                  "language", "python", "c++",
                  "language", "python", "c++",
                  ], 3)
-# list.page_index(4)
-
-
-print(list.page_index(3))
-
-

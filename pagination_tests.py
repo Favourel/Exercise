@@ -25,8 +25,6 @@ class PaginationTest(unittest.TestCase):
         self.assertEqual(10, 10)
 
     def testPaginationNoRounding(self):
-        """Test 15/5
-        so there's still 15, 5 per 3 pages"""
         global values
 
         values = paginator.get_page(3)
@@ -37,9 +35,7 @@ class PaginationTest(unittest.TestCase):
         self.assertEqual(4, values.next_page_number())
 
     def testCurrentAndNextAndPrevPage(self):
-        """Test current_page, next_page and prev_page work
-        so there's still 15, 5 per 3 pages
-        """
+
         global values
         p = Pagination(values, per_page=5)
         for num in values.paginator.page_range:
@@ -57,7 +53,7 @@ class PaginationTest(unittest.TestCase):
         p.current_page = 3
         self.assertEqual(4, values.next_page_number())
         self.assertEqual(2, values.previous_page_number())
-        self.assertEqual(8, values.paginator.num_pages)  # total pages
+        self.assertEqual(8, values.paginator.num_pages)
 
 
 if "__name__" == "__main__":
